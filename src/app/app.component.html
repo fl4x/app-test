@@ -1,0 +1,31 @@
+<md-toolbar color="primary" class="mat-elevation-z14">
+  <button md-button class="example-fab" (click)="sidenav.toggle()"><md-icon>menu</md-icon> Menu</button>
+  <span class="example-spacer"></span>
+  <span>{{(this._router.url).replace("/", ">").slice(1, 40)}}</span>
+  <span class="example-spacer"></span>
+  <span>Angular 4: Material App</span>
+</md-toolbar>
+
+<md-sidenav-container class="sidenavcon">
+  <md-sidenav #sidenav mode="side" opened="false" class="mat-elevation-z15">
+    <md-nav-list>
+      <md-list-item>
+        <a md-line routerLink="/posts">Posts</a>
+        <md-icon>dashboard</md-icon>
+      </md-list-item>
+
+      <md-list-item>
+        <a md-line routerLink="/posts">Users</a>
+        <md-icon>fingerprint</md-icon>
+      </md-list-item>
+
+      <md-list-item>
+        <a md-line routerLink="/posts">Albums</a>
+        <md-icon>pets</md-icon>
+      </md-list-item>
+    </md-nav-list>
+  </md-sidenav>
+
+  <router-outlet></router-outlet>
+
+</md-sidenav-container>

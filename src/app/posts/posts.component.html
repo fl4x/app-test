@@ -1,0 +1,20 @@
+<md-grid-list cols="4" rowHeight="2:1.2">
+  <md-grid-tile *ngFor="let post of posts">
+    
+    <md-card class="post-card">
+      <md-card-header>
+        <md-card-title><b>Post title:</b> {{post.title}}</md-card-title>
+        <md-card-subtitle><b>Post id:</b> {{post.id}}</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <p>
+          {{post.body}}
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button (click)="onClick()">EDIT</button>
+      </md-card-actions>
+    </md-card>
+  </md-grid-tile>
+
+</md-grid-list>

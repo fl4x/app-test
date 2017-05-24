@@ -1,0 +1,34 @@
+<md-grid-list cols="3" rowHeight="1:1.4">
+
+  <md-grid-tile><button md-raised-button (click)="onCli()">Back to posts</button></md-grid-tile>
+
+  <md-grid-tile>
+    <md-card>
+      <form class="example-form" action="http://jsonplaceholder.typicode.com/posts" target="_blank" method="POST" [formGroup]="myForm"
+        novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+        <md-input-container class="form-group">
+          <input mdInput placeholder="title" formControlName="title">
+        </md-input-container>
+
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="userId" formControlName="userId">
+        </md-input-container>
+
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="id" formControlName="id" value="asdasdasd">
+        </md-input-container>
+
+        <md-input-container class="example-full-width">
+          <textarea mdInput placeholder="body" formControlName="body"></textarea>
+        </md-input-container>
+        <button md-raised-button type="submit" aria-label="Show an example snack-bar">SUBMIT</button>
+        
+      </form>
+    </md-card>
+    
+  </md-grid-tile>
+
+  <md-grid-tile>
+  </md-grid-tile>
+
+</md-grid-list>
