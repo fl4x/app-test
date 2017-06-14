@@ -4,3 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Link to a view
 App is served from herokuapp [App-Test](https://ng4-material-app.herokuapp.com/)
+
+### Currently Responsive on 1920x1080 resolution only ;)
